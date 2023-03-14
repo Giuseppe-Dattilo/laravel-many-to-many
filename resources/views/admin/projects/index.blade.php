@@ -52,7 +52,7 @@
             </td>
             <td>
               @forelse($project->technologies as $technology)
-              <span class="badge rounded-pill me-2 text-bg-{{ $technology->color }}">{{ $technology->label }}</span>
+              <span class="badge rounded-pill me-2" style="background-color:{{ $technology->color }}">{{ $technology->label }}</span>
               @empty
                 -
               @endforelse

@@ -7,7 +7,7 @@
 </header>
 <div class="clearfix">
     @if($project->image)
-        <img class="me-2 img-fluid float-start" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}">
+        <img class="me-2 float-start" width="300px" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}">
     @endif
     <p>{{ $project->description }}</p>
     <div><strong>Creato: </strong><time>{{ $project->created_at }}</time>

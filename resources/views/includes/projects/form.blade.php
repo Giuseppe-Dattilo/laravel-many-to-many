@@ -46,12 +46,12 @@
         <div class="col-md-7">
             <div class="mb-3">
                 <label for="image" class="form-label">Immagine</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image', $project->image) }}">
-                @error('image')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @else
-                    <div class="text-muted">Inserisci l'url dell'immagine</div>
-                @enderror     
+                <input type="file" class="form-control @if($project->image) d-none @endif" id="image" name="image">
+                  
+                <div class="input-group mb-3 @if(!$project->image) d-none @endif" id="previous-image">
+                    <button class="btn btn-outline-secondary" type="button" id="change-image-button">Cambia immagine</button>
+                    <input type="text" class="form-control" value=" {{ $project->image }}" disabled>
+                  </div>
             </div>
         </div>  
         <div class="col-md-1 d-flex align-items-center mb-1">
@@ -104,5 +104,21 @@
         }
         else imagePreview.src = placeholder;
     });
+  </script>
+  
+   
+  <script>
+    const previousImageField = document.getElementById('previous-image');
+    const changeImageButton = document.getElementById('change-image-button');
+
+
+    const showFileInput = () => {
+        imageInput.classList.remove('d-none');
+        previousImageField.classList.add('d-none');
+        imagePreview.setAttribute('src', placeholder);
+        imageInput.click();
+    }
+
+    changeImageButton.addEventListener('click',showFileInput);
   </script>
   @endsection

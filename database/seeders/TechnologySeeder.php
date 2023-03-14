@@ -15,15 +15,15 @@ class TechnologySeeder extends Seeder
     public function run(): void
     {
         $technologies = [
-            ['label' => 'HTML', 'color' => 'danger'],
-            ['label' => 'CSS', 'color' => 'info'],
-            ['label' => 'JAVASCRIPT', 'color' => 'warning'],
-            ['label' => 'BOOTSTRAP', 'color' => 'dark'],
-            ['label' => 'VUE', 'color' => 'success'],
-            ['label' => 'SASS', 'color' => 'primary'],
-            ['label' => 'PHP', 'color' => 'warning'],
-            ['label' => 'SQL', 'color' => 'secondary'],
-            ['label' => 'LARAVEL', 'color' => 'danger'],
+            ['label' => 'HTML', 'color' => '#dc143c'],
+            ['label' => 'CSS', 'color' => '#add8e6'],
+            ['label' => 'JAVASCRIPT', 'color' => '#ffd700'],
+            ['label' => 'BOOTSTRAP', 'color' => '#6b8e23'],
+            ['label' => 'VUE', 'color' => '#9acd32'],
+            ['label' => 'SASS', 'color' => '#6495ed'],
+            ['label' => 'PHP', 'color' => '#7b68ee'],
+            ['label' => 'SQL', 'color' => '#778899'],
+            ['label' => 'LARAVEL', 'color' => '#ff7f50'],
         ];
         
         foreach ($technologies as $technology) {

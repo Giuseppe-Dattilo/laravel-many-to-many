@@ -25,7 +25,7 @@
         <tr>
             <th scope="row">{{ $type->id }}</th>
             <td>{{ $type->label }}</td>
-            <td>{{ $type->color }}</td>
+            <td style="background-color: {{ $type->color }}"width="10px"></td>
             <td>{{ $type->created_at }}</td>
             <td>{{ $type->updated_at }}</td>
             <td class="d-flex justify-content-end align-items-center">
